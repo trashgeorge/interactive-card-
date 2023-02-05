@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- exibe o site corretamente com base no dispositivo do usuário -->
+    <!--exibe o site corretamente com base no dispositivo do usuário-->
     <link
       rel="icon"
       type="image/png"
@@ -11,7 +11,7 @@
       href="images/favicon-32x32card.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Interação Cartão de Crédito</title>
+    <title>Interactive card</title>
   </head>
   <body>
     <main>
@@ -19,8 +19,11 @@
         <div class="left_section">
           <div class="cards">
             <div class="front_card">
-              <img class="card_logo" src="./images/card-logo.svg" alt="card-logo"                
-                class="card_logo">
+              <img
+                src="./images/card-logo.svg"
+                alt="card-logo"
+                class="card_logo"
+              />
               <div class="card_container">
                 <img src="./images/bg-card-front.png" alt="front-card" />
                 <h1 id="number">0000 0000 0000 0000</h1>
@@ -65,7 +68,7 @@
             </div>
             <div class="card_information">
               <div id="card_date">
-                <label for="card_date">Ex. Data (MM/DD)</label>
+                <label for="card_date">Ex. Data (MM/AA)</label>
                 <div class="two_inp">
                   <div>
                     <input
@@ -100,7 +103,7 @@
           </form>
           <div class="thank hidden">
             <img src="./images/icon-complete.svg" alt="Completed" />
-            <h1>Obrigado!</h1>
+            <h1>Agradecemos!</h1>
             <p>Adicionamos os detalhes do seu cartão</p>
             <button>Continuar</button>
           </div>
