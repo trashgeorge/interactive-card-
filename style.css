@@ -1,49 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Red+Hat+Display:wght@500;700;900&family=Rubik&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 :root {
-    --Red: hsl(0, 100%, 66%);
-    --White: hsl(0, 0%, 100%);
-    --Light-grayish-violet: hsl(270, 3%, 87%);
-    --Dark-grayish-violet: hsl(279, 6%, 55%);
-    --Very-dark-violet: hsl(278, 68%, 11%);
-  }
-  *,*>*{
-    font-family: 'Space Grotesk', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body{
-      min-height: 100vh;
-  }
-  .hidden{
-      display: none !important;
-  }
-  .error{
-    border: 2px solid var(--Red);
-  }
-  .eror_message{
-    gap: 0;
-  }
-  .error_message::after{
-    content: "can't be blank";
-    color: var(--Red);
-    margin-top: .2rem;
-  }
-  .container{
-      display: flex;
-      align-items: center;
-  }
-  .left_section{
-      min-height: 100vh;
-      width: 40%;
-      background-image: url('./images/bg-main-desktop.png');
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      position: relative;
-  }
-  .cards{
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*,*>*{
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.hidden{
+    display: none !important;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.left_section{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url('./images/bg-main-desktop.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.cards{
     position: absolute;
     top: 50%;
     display: flex;
@@ -51,11 +40,12 @@
     gap: 2rem;
     left: 100%;
     transform: translate(-50%,-50%);
-  }
-  .front_card{
+}
+.front_card{
     position: relative;
     transform: translateX(-100px);
 }
+
 .card_logo{
     position: absolute;
     top: 1rem;
@@ -123,15 +113,15 @@ input{
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-     margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 input::placeholder{
     font-family: inherit;
     color: var(--Dark-grayish-violet);
 }
 input:focus{
-    outline-color: hsl(249,99%,64%);
+    outline-color: hsl(249, 99%, 64%);
 }
 .grid_1{
     display: flex;
@@ -152,6 +142,7 @@ input:focus{
     flex-direction: column;
     grid-column: 1 span;
 }
+
 .card_information{
     display: flex;
     grid-column: 2 span;
@@ -160,7 +151,7 @@ input:focus{
 #card_date{
     display: flex;
     flex-direction: column;
-    grid-column: 1span;
+    grid-column: 1 span;
 }
 #card_date .two_inp{
     display: flex;
@@ -169,7 +160,7 @@ input:focus{
     flex-direction: column;
 }
 #card_date div input{
-    width: 70%;
+    width: 70px;
     margin-inline: .5rem;
     margin-left: 0;
 }
@@ -182,7 +173,7 @@ form button{
     height: 50px;
     color: var(--White);
     border-radius: 6px;
-    background-color: var(--Very-dark-violet);
+    background: var(--Very-dark-violet);
     cursor: pointer;
 }
 .thank{
@@ -193,7 +184,7 @@ form button{
     justify-content: center;
     gap: 2rem;
 }
-.thank_h1{
+.thank h1{
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -210,11 +201,11 @@ form button{
     background-color: var(--Very-dark-violet);
     cursor: pointer;
 }
-@media screen and (max-width: 1023px) {
-    .front_card,.front_card img,.back_card,.back_card img{
+@media screen and (max-width:1023px) {
+    .front_card .card_container img,.front_card,.back_card img,.back_card{
         width: 300px;
     }
-    .card_container .card_logo{
+    .card_logo{
         width: 50px;
     }
     #number{
@@ -229,13 +220,13 @@ form button{
     .container{
         flex-direction: column;
     }
-    .front_card,.front_card img,.back_card,.back_card img{
+    .front_card .card_container img,.front_card,.back_card img,.back_card{
         width: 280px;
     }
     .left_section{
         width: 100%;
         min-height: 30vh;
-        background-image: url(images/bg-main-mobile.png);
+        background-image: url('./images/bg-main-mobile.png');
     }
     .cards{
         flex-direction: column-reverse;
@@ -243,7 +234,7 @@ form button{
         top: 60%;
         gap: 0;
     }
-    .back-card{
+    .back_card{
         transform: translateY(70px);
     }
     .front_card{
@@ -252,4 +243,5 @@ form button{
     .right_section{
         margin-top: 6rem;
     }
+    
 }
